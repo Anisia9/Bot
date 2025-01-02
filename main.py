@@ -4,7 +4,7 @@ from telebot import types
 from datetime import datetime
 from google_sheets import add_to_sheet, create_sheet_connection
 
-bot = telebot.TeleBot("7805032570:AAEosVyvcI7B0KrU4O4lluHYvQQG2WrD8Mg")
+bot = telebot.TeleBot("")
 
 sheet = create_sheet_connection("credentials.json", "budget")
 user_base = {}
