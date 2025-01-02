@@ -3,7 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 def create_sheet_connection(json_file, sheet_name):
     """Подключаем гугл таблицу"""
-    scopes = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"] #права доступа
+    scopes = [""] #права доступа
     credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file, scopes) #данные доступа
     gc = gspread.authorize(credentials) #авторизация
     spreadsheet = gc.open(sheet_name) #открываем таблицу
